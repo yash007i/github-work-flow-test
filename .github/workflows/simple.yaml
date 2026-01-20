@@ -11,3 +11,19 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: Python Commands
+        run: |
+          import platform
+          print("Welcome to python shell")
+          print(platform.processor())
+          print(3+3)
+        shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash 
+      
