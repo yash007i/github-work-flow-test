@@ -1,0 +1,6 @@
+forEach: 
+only iterate on array elements, not change in original array. Also not a return any value.
+
+map:arr, index, array it self
+return a new value, not change in original array
+

@@ -1,0 +1,30 @@
+name: Yash
+age: 100
+address: "Jasmon: NYC"
+active: true
+hop:
+  time: any
+  where: grd
+  add:
+    a1: ksd
+    a2: amt
+    te: 6.30 to 8.30
+jsonOnject: {time: any,  where: grd, add: {a1: ksd, a2: amt,te: 6.30 }}
+arrayReq:
+  - flag
+  - road
+  - grd
+  - {gust: AC}
+objectArray: 
+  - key1: val1
+    key2: val2
+  - key3: val3
+    key4: val4
+  - add: ksd
+    grd: bfots
+longText: > 
+  kjgnfka'njf ajnfkad
+  kjdfnkdf
+  ndflnl
+  adfnlannkdl clnkcbd
+  # | for the new line
