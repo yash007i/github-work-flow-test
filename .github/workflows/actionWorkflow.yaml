@@ -1,0 +1,15 @@
+name: First Action Workflow
+
+on: [push]
+
+jobs:
+  run-github-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: test
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-get: Yash
+      - name: Pass Greeting Time
+        run: echo "{{steps.test.outputs.time}}"
