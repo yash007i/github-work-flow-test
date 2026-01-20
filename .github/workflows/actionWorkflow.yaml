@@ -10,6 +10,6 @@ jobs:
         id: test
         uses: actions/hello-world-javascript-action@v1
         with:
-          who-to-get: Yash
+          who-to-greet: Yash
       - name: Pass Greeting Time
         run: echo "{{steps.test.outputs.time}}"
