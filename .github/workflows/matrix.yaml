@@ -1,0 +1,33 @@
+name: Learn Matrix
+on: push
+jobs:
+  node-version:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [6, 8, 9]
+        exclude:
+          - os: ubuntu-latest
+            node-version: 6
+          - os: macos-latest
+            node-version: 8
+        
+        include: 
+          - os: ubuntu-latest
+            node-version: 5
+            is_ubuntu_20: true
+    runs-on: ${{matrix.os}}
+    env:
+      IS_UBUNTU_20: ${{matrix.is_ubuntu_20}}
+
+    steps:
+      - name: Log Node Version
+        run: node -v
+      - uses: actions/setup-node@v1   
+        with:
+          node_version: ${{matrix.node_version}} 
+      - name: Log node Version
+        run: |
+          node  -v
+          echo $IS_UBUNTU_20
+      # fail-fast: true
